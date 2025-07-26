@@ -162,18 +162,12 @@ for(int i=0;i<p;i++){
 
 }
 cout<<endl;
-
-
-// hollow diamond pattern
-// p=4;
-// for(int i=0;i<p-(p-1);i++){
-//     for(int j=0;j<p-i-1;j++){
-//         cout<<" ";
-//     }
-//     for(int j=0;j<)
-//     cout<<endl;
-// }
-
+ 
+p=4;
+// quadrant 2
+cout<<"hollow pyramid"<<endl;
+for(int i=0;i<p;i++){
+}
 
     return 0;
 
