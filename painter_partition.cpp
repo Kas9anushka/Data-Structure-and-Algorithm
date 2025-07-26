@@ -29,21 +29,21 @@ bool isValid(int mid,int arr[],int n,int m){
 int main(){
     int n,m;
     cin>>n>>m;
-    int arr[n]={40,90,45,20};
+    int arr[n];
     int sum=0;
     for(int i=0;i<n;i++){
-        // cin>>arr[i];
+        cin>>arr[i];
         sum+=arr[i];
     }
-    int min=arr[0];
+    int max=arr[0];
     for(int i=0;i<n;i++){
-        if(arr[i]<min){
-            min=arr[i];
+        if(arr[i]>max){
+            max=arr[i];
         }
 
     }
-    int st=min;
-    int end=sum;
+    int st=max; // minimum time taken to finish painting
+    int end=sum; // maximum time taken to finsih painitng
     int ans=-1;
     while(st<=end){
         int mid=st+(end-st)/2;
@@ -54,6 +54,6 @@ int main(){
             st=mid+1;
         }
     }
-    cout<<ans;
+    cout<<"minimum time taken to finish painting is: "<<ans;
     
 }
