@@ -5,6 +5,9 @@ using namespace std;
 
 bool isValid(int arr[],int n, int m, int mid){
     int stu=1, pages=0;
+    if(m>n){
+        return false;
+    }
     for(int i=0;i<n;i++){
         if(arr[i]>mid){
             return false;
@@ -34,9 +37,6 @@ int main(){
         sum+=arr[i];
     }
 
-    if(m>n){
-        return -1;
-    }
     // binary search on ppssible array
     int st=0;
     int end=sum;
